@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "customConditions": ["fst-util-from-fs", "development"]
+  },
+  "extends": "./tsconfig.json"
+}
