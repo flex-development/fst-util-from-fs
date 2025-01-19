@@ -1378,13 +1378,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@flex-development/builtin-modules@npm:2.1.2":
-  version: 2.1.2
-  resolution: "@flex-development/builtin-modules@npm:2.1.2::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Fbuiltin-modules%2F2.1.2%2Ff4d6b61c135889cf80f743e370b1576ee25dfac2"
-  checksum: 10/62ce59ebf6710e750fc306cf641674ea29c5c4a0d33e3360d99120248fbb7643a944301f438e59e8207ba79319bff566e5a1adb0dc6ac92433097b1fc36e57a8
-  languageName: node
-  linkType: hard
-
 "@flex-development/commitlint-config@npm:1.0.1":
   version: 1.0.1
   resolution: "@flex-development/commitlint-config@npm:1.0.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Fcommitlint-config%2F1.0.1%2F802e285802fe8188c2f02f68114ca31a20b6eb6d"
@@ -1489,11 +1482,11 @@ __metadata:
     "@flex-development/errnode": "npm:3.1.1"
     "@flex-development/fst": "flex-development/fst#commit=9fae8b6708a1e392bb874a68aa28730fe6cefdf5"
     "@flex-development/grease": "npm:3.0.0-alpha.9"
-    "@flex-development/is-builtin": "npm:3.2.0"
     "@flex-development/pathe": "npm:4.0.1"
     "@flex-development/tutils": "npm:6.0.0-alpha.25"
     "@flex-development/unist-util-builder": "npm:2.0.0"
     "@flex-development/unist-util-types": "npm:1.6.1"
+    "@flex-development/unist-util-visit": "npm:1.1.0"
     "@stylistic/eslint-plugin": "npm:2.13.0"
     "@tsconfig/strictest": "npm:2.0.5"
     "@types/chai": "npm:5.0.1"
@@ -1502,11 +1495,13 @@ __metadata:
     "@types/is-ci": "npm:3.0.4"
     "@types/node": "npm:22.10.6"
     "@types/node-notifier": "npm:8.0.5"
+    "@types/unist": "npm:3.0.3"
     "@typescript-eslint/eslint-plugin": "npm:8.19.2-alpha.12"
     "@typescript-eslint/parser": "npm:8.19.2-alpha.12"
     "@vates/toggle-scripts": "npm:1.0.0"
     "@vitest/coverage-v8": "npm:3.0.0-beta.4"
     "@vitest/ui": "npm:3.0.0-beta.4"
+    convert-hrtime: "npm:5.0.0"
     cross-env: "npm:7.0.3"
     cspell: "npm:8.17.2"
     devlop: "npm:1.1.0"
@@ -1608,6 +1603,7 @@ __metadata:
     typescript: "npm:5.7.3"
     typescript-eslint: "npm:8.19.2-alpha.12"
     unified: "npm:11.0.5"
+    unist-util-size: "npm:4.0.0"
     vfile: "npm:6.0.3"
     vitest: "npm:3.0.0-beta.4"
     yaml-eslint-parser: "npm:1.2.3"
@@ -1693,15 +1689,6 @@ __metadata:
   peerDependencies:
     "@types/node": ">=16.18.23"
   checksum: 10/0705a8176aa44697404d77b0225e5c6026e9b575bdab479c499e2ccd3a1fd4601693da0cafa79b7548899e811360e2b92303e95f68269ec45e558eba8b9dbd4d
-  languageName: node
-  linkType: hard
-
-"@flex-development/is-builtin@npm:3.2.0":
-  version: 3.2.0
-  resolution: "@flex-development/is-builtin@npm:3.2.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Fis-builtin%2F3.2.0%2F555baad0f0c1a9b329b3b6e5aaa763490d2394ae"
-  dependencies:
-    "@flex-development/builtin-modules": "npm:2.1.2"
-  checksum: 10/3f52c5bd289b9518720b31d50458f1f9416523e502969f659174d8054b208b17a38d88e5d2e51402f56ca07c4f7d63e786745f6ced558a8f478a55ca0e97d67a
   languageName: node
   linkType: hard
 
@@ -1938,12 +1925,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@flex-development/unist-util-types@npm:1.3.1":
+  version: 1.3.1
+  resolution: "@flex-development/unist-util-types@npm:1.3.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Funist-util-types%2F1.3.1%2F44deb809fdc2921405035513bd54c4605213c7bc"
+  peerDependencies:
+    "@types/unist": ">=3.0.2"
+  checksum: 10/110ec112363147784c6f4a32473a1a44a76d28b775fe3d37bbe46b09e7c9f1f67dd0c8d7b9ec5bbe5b8f4d915cbbb826e3b1efc70c0cb5ca020c34b72351c4c5
+  languageName: node
+  linkType: hard
+
 "@flex-development/unist-util-types@npm:1.6.1":
   version: 1.6.1
   resolution: "@flex-development/unist-util-types@npm:1.6.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Funist-util-types%2F1.6.1%2F0deabf0a30d32dc9ae23aea394ef67b8f0b806b9"
   dependencies:
     "@types/unist": "npm:3.0.2"
   checksum: 10/fd308bb9673987b588d54afc56821fefaad9233fecf8d76f352a055c339716979f3c2e1b2d145628ffa0d9ac033fbe28d942294a029d98b52334dd9703471f99
+  languageName: node
+  linkType: hard
+
+"@flex-development/unist-util-visit@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@flex-development/unist-util-visit@npm:1.1.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Funist-util-visit%2F1.1.0%2Fb565477b68a3adb5b2ce14da1e013d30e52cfe15"
+  dependencies:
+    "@flex-development/tutils": "npm:6.0.0-alpha.25"
+    "@flex-development/unist-util-types": "npm:1.3.1"
+    unist-util-is: "npm:6.0.0"
+  peerDependencies:
+    "@types/unist": ">=3.0.2"
+  checksum: 10/faa5501fb0649043ee9dfad9874d200647973b49da1f0a76a62cd4d92ca7a7410ac0d1c078fa06a6768b9686949c32d3f86ba9d416d0a84440e13979f8e30397
   languageName: node
   linkType: hard
 
@@ -3958,6 +3967,13 @@ __metadata:
   bin:
     conventional-commits-parser: cli.mjs
   checksum: 10/3b56a9313127f18c56b7fc0fdb0c49d2184ec18e0574e64580a0d5a3c3e0f3eecfb8bc3131dce967bfe9fd27debd5f42b7fc1f09e8e541e688e1dd2b57f49278
+  languageName: node
+  linkType: hard
+
+"convert-hrtime@npm:5.0.0":
+  version: 5.0.0
+  resolution: "convert-hrtime@npm:5.0.0"
+  checksum: 10/5245ad1ac6dd57b2d87624ae0eeac1d2a74812a6631208c09368bef787a28e7dbfa736cddaa9c8a0c425cb240437ea506afec7b9684ff617004d06a551f26c87
   languageName: node
   linkType: hard
 
@@ -11169,7 +11185,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unist-util-is@npm:^6.0.0":
+"unist-util-is@npm:6.0.0, unist-util-is@npm:^6.0.0":
   version: 6.0.0
   resolution: "unist-util-is@npm:6.0.0"
   dependencies:
@@ -11203,6 +11219,16 @@ __metadata:
     "@types/unist": "npm:^3.0.0"
     unist-util-visit: "npm:^5.0.0"
   checksum: 10/4d89dc25e2091f9d47d92552145a26bf0e4a32d6b453e9cacac7742d730ada186ee1b820579fee3eeaa31e119850c2cb82f8b5898f977a636d7220e998626967
+  languageName: node
+  linkType: hard
+
+"unist-util-size@npm:4.0.0":
+  version: 4.0.0
+  resolution: "unist-util-size@npm:4.0.0"
+  dependencies:
+    "@types/unist": "npm:^3.0.0"
+    unist-util-is: "npm:^6.0.0"
+  checksum: 10/5084502e61062b5bd74fc487f4a989c4420f447a38ec333f767cfc7f3836abc612b6c7a6c5ff6942f7b801dd3af85712acce31ca2fde12a4f08e6f2850ccf42a
   languageName: node
   linkType: hard
 

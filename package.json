@@ -50,10 +50,7 @@
       "default": "./dist/interfaces/*.d.mts"
     },
     "#internal/fs": {
-      "types": {
-        "fst-util-from-fs": "./src/internal/fs.d.mts",
-        "default": "./dist/internal/fs.d.mts"
-      },
+      "types": "./src/internal/fs.d.mts",
       "browser": {
         "fst-util-from-fs": "./src/internal/fs.browser.mts",
         "default": "./dist/internal/fs.browser.mjs"
@@ -65,12 +62,20 @@
       "fst-util-from-fs": "./src/internal/*.mts",
       "default": "./dist/internal/*.mjs"
     },
-    "#tests/*": "./__tests__/*.mts"
+    "#tests/*": "./__tests__/*.mts",
+    "#types/*": {
+      "fst-util-from-fs": "./src/types/*.mts",
+      "default": "./dist/types/*.d.mts"
+    },
+    "#util": {
+      "fst-util-from-fs": "./src/util.mts",
+      "default": "./dist/util.mjs"
+    }
   },
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "scripts": {
-    "build": "yarn clean:build; tsc -p tsconfig.build.json --noEmit false; trash ./dist/{interfaces,types}/*.{mjs,mjs.map}",
+    "build": "yarn clean:build; tsc -p tsconfig.build.json --noEmit false; trash ./dist/internal/*.d.mts && trash ./dist/{interfaces,types}/*.mjs",
     "check:ci": "yarn dedupe --check && yarn check:format && yarn check:lint && yarn check:spelling && yarn typecheck && yarn test:cov && yarn pack && yarn check:types:build && attw package.tgz && yarn clean:pack",
     "check:format": "dprint check --incremental=false",
     "check:lint": "eslint --exit-on-fatal-error --max-warnings 0 .",
@@ -122,8 +127,8 @@
     "@eslint/js": "9.18.0",
     "@flex-development/commitlint-config": "1.0.1",
     "@flex-development/grease": "3.0.0-alpha.9",
-    "@flex-development/is-builtin": "3.2.0",
     "@flex-development/tutils": "6.0.0-alpha.25",
+    "@flex-development/unist-util-visit": "1.1.0",
     "@stylistic/eslint-plugin": "2.13.0",
     "@tsconfig/strictest": "2.0.5",
     "@types/chai": "5.0.1",
@@ -132,11 +137,13 @@
     "@types/is-ci": "3.0.4",
     "@types/node": "22.10.6",
     "@types/node-notifier": "8.0.5",
+    "@types/unist": "3.0.3",
     "@typescript-eslint/eslint-plugin": "8.19.2-alpha.12",
     "@typescript-eslint/parser": "8.19.2-alpha.12",
     "@vates/toggle-scripts": "1.0.0",
     "@vitest/coverage-v8": "3.0.0-beta.4",
     "@vitest/ui": "3.0.0-beta.4",
+    "convert-hrtime": "5.0.0",
     "cross-env": "7.0.3",
     "cspell": "8.17.2",
     "dprint": "0.48.0",
@@ -237,6 +244,7 @@
     "typescript": "5.7.3",
     "typescript-eslint": "8.19.2-alpha.12",
     "unified": "11.0.5",
+    "unist-util-size": "4.0.0",
     "vfile": "6.0.3",
     "vitest": "3.0.0-beta.4",
     "yaml-eslint-parser": "1.2.3"
