@@ -114,7 +114,7 @@
   },
   "dependencies": {
     "@flex-development/errnode": "3.1.1",
-    "@flex-development/fst": "flex-development/fst#commit=9fae8b6708a1e392bb874a68aa28730fe6cefdf5",
+    "@flex-development/fst": "1.0.0",
     "@flex-development/pathe": "4.0.1",
     "@flex-development/unist-util-builder": "2.0.0",
     "@flex-development/unist-util-types": "1.6.1",

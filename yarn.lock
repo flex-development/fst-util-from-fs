@@ -1480,7 +1480,7 @@ __metadata:
     "@eslint/js": "npm:9.18.0"
     "@flex-development/commitlint-config": "npm:1.0.1"
     "@flex-development/errnode": "npm:3.1.1"
-    "@flex-development/fst": "flex-development/fst#commit=9fae8b6708a1e392bb874a68aa28730fe6cefdf5"
+    "@flex-development/fst": "npm:1.0.0"
     "@flex-development/grease": "npm:3.0.0-alpha.9"
     "@flex-development/pathe": "npm:4.0.1"
     "@flex-development/tutils": "npm:6.0.0-alpha.25"
@@ -1610,13 +1610,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@flex-development/fst@flex-development/fst#commit=9fae8b6708a1e392bb874a68aa28730fe6cefdf5":
-  version: 0.0.0
-  resolution: "@flex-development/fst@https://github.com/flex-development/fst.git#commit=9fae8b6708a1e392bb874a68aa28730fe6cefdf5"
+"@flex-development/fst@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@flex-development/fst@npm:1.0.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Ffst%2F1.0.0%2F07467730b23f6a4ac4fc0fa9e3b5ae4aa94f365f"
   dependencies:
     "@flex-development/unist-util-types": "npm:1.6.1"
     "@types/unist": "npm:3.0.3"
-  checksum: 10/bb1b9737092cff5b6a3d1a7eec8a89ffdab4ebac61d0203f8460dfd5316af2850f5ad30ea6c1518af5fe5da901b40fb6b6c4ca9a9c6a5f92db8530baa0209809
+  checksum: 10/84423d56e50065208d854eea323993c1f80a22d01a2b2da90fd599581a5088b8efa8e0d44106238fb9f5ddcb909ad7ae5a5ed2570232e53a7b93873c6aae2a9b
   languageName: node
   linkType: hard
 
