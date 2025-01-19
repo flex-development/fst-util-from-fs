@@ -49,7 +49,7 @@ function readdir(
   if (
     depth === null ||
     depth === undefined ||
-    typeof depth === 'number' && depth > 0
+    typeof depth === 'number' && depth >= 0
   ) {
     dir = toPath(dir)
 

@@ -99,15 +99,23 @@ Options for creating a file system tree (TypeScript interface).
 
 #### Properties
 
-- `content` (`boolean`, optional) — include file content (populates the `value` field of each [`file` node][fst-file])
-- `depth` (`number`, optional) — maximum search depth (inclusive)
-- `extensions` ([`Extensions`](#extensions), optional) — list of file extensions to filter matched files by
-- `filters` ([`Filters`](#filters), optional) — path filters to determine if nodes should be added to the tree
-- `fs` ([`Partial<FileSystem>`](#filesystem), optional) — file system adapter
-- `handles` ([`Handles`](#handles), optional) — node handlers
-- `root` (`URL | string`, optional) — module id of root directory
+- `content` (`boolean`, optional) —
+  include file content (populates the `value` field of each [`file` node][fst-file])
+- `depth` (`number`, optional) —
+  maximum search depth (inclusive). a search depth less than `0` will produce an empty tree
+- `extensions` ([`Extensions`](#extensions), optional) —
+  list of file extensions to filter matched files by
+- `filters` ([`Filters`](#filters), optional) —
+  path filters to determine if nodes should be added to the tree
+- `fs` ([`Partial<FileSystem>`](#filesystem), optional) —
+  file system adapter
+- `handles` ([`Handles`](#handles), optional) —
+  node handlers
+- `root` (`URL | string`, optional) —
+  module id of root directory
   - **default**: [`pathe.cwd() + pathe.sep`][pathe]
-- `sort` ([`Sort`](#sort), optional) — function used to sort child nodes
+- `sort` ([`Sort`](#sort), optional) —
+  function used to sort child nodes
 
 ### `Dirent`
 

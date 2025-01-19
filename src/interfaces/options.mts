@@ -24,6 +24,8 @@ interface Options {
 
   /**
    * Maximum search depth (inclusive).
+   *
+   * > 👉 **Note**: A search depth less than `0` will produce an empty tree.
    */
   depth?: number | null | undefined
 

@@ -84,12 +84,9 @@ describe('unit:fromFileSystem', () => {
     }
   })
 
-  it.each<Parameters<typeof testSubject>>([
-    [{ depth: -13 }],
-    [{ depth: 0 }]
-  ])('should return empty tree (%#)', options => {
+  it('should return empty tree', () => {
     // Act
-    const result = testSubject(options)
+    const result = testSubject({ depth: -13 })
 
     // Expect
     expect(result).to.have.property('children').be.an('array')
@@ -104,14 +101,14 @@ describe('unit:fromFileSystem', () => {
   ]>([
     [
       {
-        depth: 1
+        depth: 0
       },
       function assertion(
         this: void,
         options: Options | null | undefined
       ): Fn<[Root], undefined> {
         ok(options, 'expected `options`')
-        ok(options.depth, 'expected `options.depth`')
+        ok(typeof options.depth === 'number', 'expected `options.depth`')
 
         /**
          * Read directory result.
