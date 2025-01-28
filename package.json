@@ -145,7 +145,7 @@
     "@vitest/ui": "3.0.4",
     "convert-hrtime": "5.0.0",
     "cross-env": "7.0.3",
-    "cspell": "8.17.2",
+    "cspell": "8.17.3",
     "dprint": "0.48.0",
     "editorconfig": "2.0.0",
     "esbuild": "0.24.2",
