@@ -10933,17 +10933,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tinyglobby@npm:^0.2.11":
-  version: 0.2.11
-  resolution: "tinyglobby@npm:0.2.11"
-  dependencies:
-    fdir: "npm:^6.4.3"
-    picomatch: "npm:^4.0.2"
-  checksum: 10/8f10a0cd527041155c0dadd9febb5afc97a95649521f550554868c09beb4cb62ceca1d97536108efe53957967eb54f83a7bed59867f666b325fc3f00ca72fd24
-  languageName: node
-  linkType: hard
-
-"tinyglobby@npm:^0.2.12":
+"tinyglobby@npm:^0.2.11, tinyglobby@npm:^0.2.12":
   version: 0.2.12
   resolution: "tinyglobby@npm:0.2.12"
   dependencies:
