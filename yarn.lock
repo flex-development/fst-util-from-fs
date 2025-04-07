@@ -506,14 +506,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cspell/dict-data-science@npm:^2.0.7":
-  version: 2.0.7
-  resolution: "@cspell/dict-data-science@npm:2.0.7"
-  checksum: 10/dce46d2a5eeb84d1d4dc803a0dc5556d8c4dee243d7091a89aea941f3255f4d0bbbdaa527fee0687aba1266b2896ed536e6a1a8a26823c9cc9bc0938a4f3fe0d
-  languageName: node
-  linkType: hard
-
-"@cspell/dict-data-science@npm:^2.0.8":
+"@cspell/dict-data-science@npm:^2.0.7, @cspell/dict-data-science@npm:^2.0.8":
   version: 2.0.8
   resolution: "@cspell/dict-data-science@npm:2.0.8"
   checksum: 10/cf0e0519d0c5be29341c3333c964488b3698839d2d5b5bd7bc6e541cd3b87b1f2c19319dd486bcf6b78f9a1b40e2e056ed4296249c5cadd116a5b7cb7d73a6f5
