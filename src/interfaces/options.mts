@@ -52,6 +52,8 @@ interface Options {
    * Get a file system entries record.
    *
    * @see {@linkcode GetFileSystemEntries}
+   *
+   * @default getFileSystemEntries
    */
   getFileSystemEntries?: GetFileSystemEntries | null | undefined
 

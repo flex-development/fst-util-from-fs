@@ -20,7 +20,9 @@
 - [Install](#install)
 - [Use](#use)
 - [API](#api)
-  - [`fromFileSystem([options])`](#fromfilesystemoptions)
+  - [`fromFileSystem<T>([options])`](#fromfilesystemtoptions)
+- [Utilities](#utilities)
+  - [`getFileSystemEntries<T>(parent[, fs])`](#getfilesystementriestparent-fs)
 - [Types](#types)
   - [`Awaitable<[T]>`](#awaitablet)
   - [`Dirent`](#dirent)
@@ -92,23 +94,57 @@ In browsers with [`esm.sh`][esmsh]:
 
 ## API
 
-This package exports the following identifiers:
-
-- [`fromFileSystem`](#fromfilesystemoptions)
+This package exports the identifiers listed below.
 
 There is no default export.
 
-### `fromFileSystem([options])`
+### `fromFileSystem<T>([options])`
 
 Create a file system tree.
 
+#### Type Parameters
+
+- `T` ([`Awaitable<Root>`][fst-root])
+  — the tree
+
 #### Parameters
 
-- `options` ([`Options`](#options), optional) — tree options
+- `options` ([`Options`](#options) | `null` | `undefined`, optional)
+  — options for tree creation
 
 #### Returns
 
-([`Root`][fst-root]) file system tree
+(`T`) The file system tree
+
+## Utilities
+
+This package exports utilities from `@flex-development/fst-util-from-fs/utils`.
+
+The utilities library exports the identifiers listed below.
+
+There is no default export.
+
+### `getFileSystemEntries<T>(parent[, fs])`
+
+Get a record of accessible file system entries.
+
+> 👉 **Note**: Entries are relative to `parent`.
+
+#### Type Parameters
+
+- `T` ([`Awaitable<FileSystemEntries>`](#filesystementries))
+  — the entries record
+
+#### Parameters
+
+- `parent` (`URL` | `string` | `null` | `undefined`)
+  — the entry id of the parent directory
+- `fs` ([`FileSystem`](#filesystem) | `null` | `undefined`)
+  — the file system api
+
+#### Returns
+
+(`T`) The file system entries record
 
 ## Types
 
@@ -386,6 +422,7 @@ Options for creating a file system tree (`interface`).
   — the file system adapter
 - `getFileSystemEntries` ([`GetFileSystemEntries`](#getfilesystementriest) | `null` | `undefined`, optional)
   — get a file system entries record
+  - **default**: [`getFileSystemEntries`](#getfilesystementriestparent-fs)
 - `handles` ([`Handles`](#handles) | `null` | `undefined`, optional)
   — the callbacks to fire after a node is added to the tree
 - `root` (`URL` | `string` | `null` | `undefined`, optional)

@@ -27,7 +27,7 @@ export default getFileSystemEntries
  * > 👉 **Note**: Entries are relative to `parent`.
  *
  * @template {Awaitable<FileSystemEntries>} T
- *  The file system entries record
+ *  The entries record
  *
  * @this {void}
  *
