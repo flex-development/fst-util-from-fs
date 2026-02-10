@@ -4,48 +4,26 @@
  */
 
 import type TestSubject from '#interfaces/file-system'
-import type { Dirent } from '@flex-development/fst-util-from-fs'
+import type {
+  Readdir,
+  Realpath,
+  Stat
+} from '@flex-development/fst-util-from-fs'
 
 describe('unit-d:interfaces/FileSystem', () => {
-  describe('readFileSync', () => {
-    type Subject = NonNullable<TestSubject['readFileSync']>
-
-    it('should match [this: void]', () => {
-      expectTypeOf<Subject>().thisParameter.toEqualTypeOf<void>()
-    })
-
-    describe('parameters', () => {
-      it('should be callable with [string, "utf8"]', () => {
-        expectTypeOf<Subject>().parameters.toEqualTypeOf<[string, 'utf8']>()
-      })
-    })
-
-    describe('returns', () => {
-      it('should return string', () => {
-        expectTypeOf<Subject>().returns.toEqualTypeOf<string>()
-      })
-    })
+  it('should match [readdir: Readdir]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('readdir')
+      .toEqualTypeOf<Readdir>()
   })
 
-  describe('readdirSync', () => {
-    type Subject = TestSubject['readdirSync']
+  it('should match [realpath: Realpath]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('realpath')
+      .toEqualTypeOf<Realpath>()
+  })
 
-    it('should match [this: void]', () => {
-      expectTypeOf<Subject>().thisParameter.toEqualTypeOf<void>()
-    })
-
-    describe('parameters', () => {
-      it('should be callable with [string, { withFileTypes: true }]', () => {
-        expectTypeOf<Subject>()
-          .parameters
-          .toEqualTypeOf<[string, { withFileTypes: true }]>()
-      })
-    })
-
-    describe('returns', () => {
-      it('should return readonly Dirent[]', () => {
-        expectTypeOf<Subject>().returns.toEqualTypeOf<readonly Dirent[]>()
-      })
-    })
+  it('should match [stat: Stat]', () => {
+    expectTypeOf<TestSubject>().toHaveProperty('stat').toEqualTypeOf<Stat>()
   })
 })

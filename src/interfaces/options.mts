@@ -7,8 +7,11 @@ import type {
   Extensions,
   FileSystem,
   Filters,
+  GetFileSystemEntries,
   Handles,
-  Sort
+  Sort,
+  ToVisitKey,
+  VisitMap
 } from '@flex-development/fst-util-from-fs'
 
 /**
@@ -16,21 +19,14 @@ import type {
  */
 interface Options {
   /**
-   * Include file content.
-   *
-   * > 👉 **Note**: Populates the `value` field of each `file` node.
-   */
-  content?: boolean | null | undefined
-
-  /**
-   * Maximum search depth (inclusive).
+   * The maximum search depth (inclusive).
    *
    * > 👉 **Note**: A search depth less than `0` will produce an empty tree.
    */
   depth?: number | null | undefined
 
   /**
-   * List of file extensions to filter matched files by.
+   * The file extensions to filter matched files by.
    *
    * > 👉 **Note**: This is alternative way to exclude files from the tree.
    *
@@ -46,11 +42,18 @@ interface Options {
   filters?: Filters | null | undefined
 
   /**
-   * File system adapter.
+   * The file system adapter.
    *
    * @see {@linkcode FileSystem}
    */
-  fs?: Partial<FileSystem> | null | undefined
+  fs?: FileSystem | null | undefined
+
+  /**
+   * Get a file system entries record.
+   *
+   * @see {@linkcode GetFileSystemEntries}
+   */
+  getFileSystemEntries?: GetFileSystemEntries | null | undefined
 
   /**
    * Node handlers.
@@ -60,7 +63,7 @@ interface Options {
   handles?: Handles | null | undefined
 
   /**
-   * Module id of root directory.
+   * The module id of the root directory.
    *
    * @default
    *  pathe.cwd() + pathe.sep
@@ -68,13 +71,30 @@ interface Options {
   root?: URL | string | null | undefined
 
   /**
-   * Function used to sort child nodes.
+   * The child node sorter.
    *
    * By default, nodes are sorted by `type` and `name`.
    *
    * @see {@linkcode Sort}
    */
   sort?: Sort | null | undefined
+
+  /**
+   * Generate a key for the {@linkcode visited} directory map.
+   *
+   * @see {@linkcode ToVisitKey}
+   *
+   * @default identity
+   */
+  visitKey?: ToVisitKey | null | undefined
+
+  /**
+   * Map indicating which directories have already been searched.
+   *
+   * @default
+   *  new Map()
+   */
+  visited?: VisitMap | null | undefined
 }
 
 export type { Options as default }

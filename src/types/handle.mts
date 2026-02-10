@@ -4,41 +4,55 @@
  */
 
 import type { Child, AnyParent as Parent, Root } from '@flex-development/fst'
-import type { Dirent, FileSystem } from '@flex-development/fst-util-from-fs'
+import type {
+  Awaitable,
+  Dirent,
+  FileSystem
+} from '@flex-development/fst-util-from-fs'
 
 /**
- * Handle `node`.
+ * Handle a `node`.
  *
+ * @see {@linkcode Awaitable}
  * @see {@linkcode Child}
  * @see {@linkcode Dirent}
  * @see {@linkcode FileSystem}
  * @see {@linkcode Parent}
- * @see {@linkcode Root}
  *
- * @template {Child} [T=Child]
- *  Child node
+ * @template {Child} [T]
+ *  The file system entry node
+ * @template {Awaitable<null | undefined | void>} [Result]
+ *  The result of the handle
  *
  * @this {void}
  *
  * @param {T} node
- *  Directory or file node
+ *  The file system entry node
  * @param {Dirent} dirent
- *  Dirent object representing directory or file
+ *  The dirent representing the file system entry
  * @param {Parent} parent
- *  Parent node
+ *  The parent of `node`
  * @param {Root} tree
- *  File system tree
+ *  The file system tree
+ * @param {Parent[]} ancestors
+ *  The ancestors of `node`
  * @param {FileSystem} fs
- *  File system adapter
- * @return {null | undefined | void}
+ *  The file system adapter
+ * @return {Result}
  */
-type Handle<T extends Child = Child> = (
+type Handle<
+  T extends Child = Child,
+  Result extends Awaitable<null | undefined | void> = Awaitable<
+    null | undefined | void
+  >
+> = (
   this: void,
   node: T,
   dirent: Dirent,
   parent: Parent,
   tree: Root,
+  ancestors: Parent[],
   fs: FileSystem
-) => null | undefined | void
+) => Result
 
 export type { Handle as default }

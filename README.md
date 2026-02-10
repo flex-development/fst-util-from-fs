@@ -2,6 +2,8 @@
 
 [![github release](https://img.shields.io/github/v/release/flex-development/fst-util-from-fs.svg?include_prereleases\&sort=semver)](https://github.com/flex-development/fst-util-from-fs/releases/latest)
 [![npm](https://img.shields.io/npm/v/@flex-development/fst-util-from-fs.svg)](https://npmjs.com/package/@flex-development/fst-util-from-fs)
+[![npm downloads](https://img.shields.io/npm/dm/@flex-development/fst-util-from-fs.svg)](https://www.npmcharts.com/compare/@flex-development/fst-util-from-fs?interval=30)
+[![install size](https://packagephobia.now.sh/badge?p=@flex-development/fst-util-from-fs)](https://packagephobia.now.sh/result?p=@flex-development/fst-util-from-fs)
 [![codecov](https://codecov.io/gh/flex-development/fst-util-from-fs/branch/main/graph/badge.svg?token=c7gDtTlaw3)](https://codecov.io/gh/flex-development/fst-util-from-fs)
 [![module type: esm](https://img.shields.io/badge/module%20type-esm-brightgreen)](https://github.com/voxpelli/badges-cjs-esm)
 [![license](https://img.shields.io/github/license/flex-development/fst-util-from-fs.svg)](LICENSE.md)

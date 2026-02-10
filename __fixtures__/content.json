@@ -1,0 +1,303 @@
+{
+  "__fixtures__": {
+    "content.json": "",
+    "fsa.mts": ""
+  },
+  "__mocks__": {
+    "fs": {
+      "index.mts": "",
+      "promises.mts": ""
+    }
+  },
+  "__tests__": {
+    "reporters": {
+      "notifier.mts": ""
+    },
+    "reports": {
+      "test.json": "",
+      "test.junit.xml": ""
+    },
+    "serializers": {
+      "cwd.mts": ""
+    },
+    "setup": {
+      "volume.mts": ""
+    },
+    "utils": {
+      "build-path.mts": "",
+      "fs-case-type.mts": ""
+    },
+    ".DS_Store": ""
+  },
+  ".github": {
+    "ISSUE_TEMPLATE": {
+      "bug.yml": "",
+      "config.yml": "",
+      "feature.yml": "",
+      "task.yml": ""
+    },
+    "workflows": {
+      ".DS_Store": "",
+      "add-to-project.yml": "",
+      "auto-merge.yml": "",
+      "auto-review.yml": "",
+      "cache-cleanup.yml": "",
+      "ci.yml": "",
+      "dependabot-dedupe.yml": "",
+      "infrastructure.yml": "",
+      "integrity.yml": "",
+      "publish.yml": "",
+      "release-chore.yml": "",
+      "release.yml": ""
+    },
+    ".DS_Store": "",
+    ".gitconfig": "",
+    "dependabot.yml": "",
+    "funding.yml": "",
+    "infrastructure.yml": "",
+    "PULL_REQUEST_TEMPLATE.md": ""
+  },
+  ".vitest-reports": {
+    "test.blob.json": "",
+    "typecheck.blob.json": ""
+  },
+  ".vscode": {
+    "settings.json": ""
+  },
+  ".yarn": {
+    "cache": {
+      "@flex-development-fst-npm-1.0.0-3fe67f76d2-84423d56e5.zip": ""
+    },
+    "releases": {
+      "yarn-4.12.0.cjs": ""
+    },
+    "install-state.gz": ""
+  },
+  ".husky": {
+    "commit-msg": "",
+    "_": {
+      ".gitignore": "",
+      "applypatch-msg": "",
+      "commit-msg": "",
+      "h": "",
+      "husky.sh": "",
+      "post-applypatch": "",
+      "post-checkout": "",
+      "post-commit": "",
+      "post-merge": "",
+      "post-rewrite": "",
+      "pre-applypatch": "",
+      "pre-auto-gc": "",
+      "pre-commit": "",
+      "pre-merge-commit": "",
+      "pre-push": "",
+      "pre-rebase": "",
+      "prepare-commit-msg": ""
+    }
+  },
+  "coverage": {
+    "src": {
+      "internal": {
+        "chain-or-call.mts.html": "",
+        "combine-paths.mts.html": "",
+        "constant.mts.html": "",
+        "empty-array.mts.html": "",
+        "empty-file-system-entries.mts.html": "",
+        "fs.node.mts.html": "",
+        "identity.mts.html": "",
+        "index.html": "",
+        "is-promise.mts.html": "",
+        "visit-directory.mts.html": "",
+        "with-trailing-slash.mts.html": ""
+      },
+      "utils": {
+        "get-file-system-entries.mts.html": "",
+        "index.html": "",
+        "index.mts.html": ""
+      },
+      "index.html": "",
+      "index.mts.html": "",
+      "util.mts.html": ""
+    },
+    "base.css": "",
+    "block-navigation.js": "",
+    "coverage-summary.json": "",
+    "favicon.png": "",
+    "index.html": "",
+    "prettify.css": "",
+    "prettify.js": "",
+    "sort-arrow-sprite.png": "",
+    "sorter.js": ""
+  },
+  "dprint": {
+    "remark.mts": "",
+    "shfmt.mts": ""
+  },
+  "node_modules": {},
+  "scripts": {
+    "release.sh": ""
+  },
+  "src": {
+    "__snapshots__": {
+      "node": {
+        "index.e2e.snap": ""
+      }
+    },
+    "__tests__": {
+      "index.e2e.spec.mts": "",
+      "util-spec-old.mts": "",
+      "util.spec.mts": ""
+    },
+    "interfaces": {
+      "__tests__": {
+        "dirent.spec-d.mts": "",
+        "file-system-entries.spec-d.mts": "",
+        "file-system.spec-d.mts": "",
+        "filters.spec-d.mts": "",
+        "handles.spec-d.mts": "",
+        "is-directory.spec-d.mts": "",
+        "is-file.spec-d.mts": "",
+        "is-symbolic-link.spec-d.mts": "",
+        "options.spec-d.mts": "",
+        "readdir-dirent-options.spec-d.mts": "",
+        "readdir-options.spec-d.mts": "",
+        "readdir.spec-d.mts": "",
+        "realpath.spec-d.mts": "",
+        "stat.spec-d.mts": "",
+        "stats.spec-d.mts": ""
+      },
+      ".DS_Store": "",
+      "dirent.mts": "",
+      "file-system-entries.mts": "",
+      "file-system.mts": "",
+      "filters.mts": "",
+      "handles.mts": "",
+      "index.mts": "",
+      "is-directory.mts": "",
+      "is-file.mts": "",
+      "is-symbolic-link.mts": "",
+      "options.mts": "",
+      "read-file.mts": "",
+      "readdir-dirent-options.mts": "",
+      "readdir-options.mts": "",
+      "readdir.mts": "",
+      "realpath.mts": "",
+      "stat.mts": "",
+      "stats.mts": ""
+    },
+    "internal": {
+      "__snapshots__": {
+        "node": {
+          "combine-paths.snap": "",
+          "get-matcher-patterns.snap": "",
+          "with-trailing-slash.snap": ""
+        }
+      },
+      "__mocks__": {
+        "fs.browser.mts": ""
+      },
+      "__tests__": {
+        "combine-paths.spec.mts": "",
+        "constant.spec.mts": "",
+        "empty-array.spec.mts": "",
+        "empty-file-system-entries.spec.mts": "",
+        "identity.spec.mts": "",
+        "is-promise.spec.mts": "",
+        "with-trailing-slash.spec.mts": ""
+      },
+      ".DS_Store": "",
+      "chain-or-call.mts": "",
+      "combine-paths.mts": "",
+      "constant.mts": "",
+      "empty-array.mts": "",
+      "empty-file-system-entries.mts": "",
+      "fs.browser.mts": "",
+      "fs.d.mts": "",
+      "fs.node.mts": "",
+      "identity.mts": "",
+      "is-promise.mts": "",
+      "visit-directory.mts": "",
+      "with-trailing-slash.mts": ""
+    },
+    "types": {
+      "__tests__": {
+        "awaitable.spec-d.mts": "",
+        "extensions.spec-d.mts": "",
+        "filter.spec-d.mts": "",
+        "get-file-system-entries.spec-d.mts": "",
+        "handle.spec-d.mts": "",
+        "list.spec-d.mts": "",
+        "sort.spec-d.mts": "",
+        "to-visit-key.spec-d.mts": "",
+        "visit-map.spec-d.mts": ""
+      },
+      "awaitable.mts": "",
+      "extensions.mts": "",
+      "filter.mts": "",
+      "get-file-system-entries.mts": "",
+      "handle.mts": "",
+      "index.mts": "",
+      "list.mts": "",
+      "sort.mts": "",
+      "to-visit-key.mts": "",
+      "visit-map.mts": ""
+    },
+    "utils": {
+      "__snapshots__": {
+        "node": {
+          "get-file-system-entries.snap": ""
+        }
+      },
+      "__tests__": {
+        "get-file-system-entries.spec.mts": "",
+        "index.e2e.spec.mts": ""
+      },
+      "get-file-system-entries.mts": "",
+      "index.mts": ""
+    },
+    ".DS_Store": "",
+    "index.mts": "",
+    "util.mts": ""
+  },
+  "typings": {
+    "editorconfig": {
+      "index.d.ts": ""
+    }
+  },
+  ".attw.json": "",
+  ".codecov.yml": "",
+  ".commitlintrc.ts": "",
+  ".cspell.json": "",
+  ".dictionary.txt": "",
+  ".dprint.jsonc": "",
+  ".DS_Store": "",
+  ".editorconfig": "",
+  ".env.repo": "",
+  ".env.vars": "",
+  ".env.zsh": "",
+  ".gitattributes": "",
+  ".gitignore": "",
+  ".nvmrc": "",
+  ".remarkignore": "",
+  ".yarnrc.yml": "",
+  "Brewfile": "",
+  "CHANGELOG.md": "",
+  "CODE_OF_CONDUCT.md": "",
+  "codecov": "",
+  "CONTRIBUTING.md": "",
+  "glob.scratch.mts": "",
+  "eslint.config.mjs": "",
+  "grease.config.json": "",
+  "LICENSE.md": "",
+  "package.json": "",
+  "README.md": "",
+  "scratch.mts": "",
+  "tsconfig.build.json": "",
+  "tsconfig.json": "",
+  "tsconfig.test.json": "",
+  "tsconfig.typecheck.json": "",
+  "vite.config.mts": "",
+  "vitest-env.d.mts": "",
+  "vitest.config.mts": "",
+  "yarn.lock": ""
+}

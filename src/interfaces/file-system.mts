@@ -3,47 +3,36 @@
  * @module fst-util-from-fs/interfaces/FileSystem
  */
 
-import type { Dirent } from '@flex-development/fst-util-from-fs'
+import type {
+  Readdir,
+  Realpath,
+  Stat
+} from '@flex-development/fst-util-from-fs'
 
 /**
- * File system adapter.
+ * The file system API.
  */
 interface FileSystem {
   /**
-   * Get the contents of the file at `path`.
+   * Read the entire contents of a directory.
    *
-   * @this {void}
-   *
-   * @param {string} path
-   *  Path to file to read
-   * @param {'utf8'} encoding
-   *  Buffer encoding
-   * @return {string}
-   *  File contents
+   * @see {@linkcode Readdir}
    */
-  readFileSync?(this: void, path: string, encoding: 'utf8'): string
+  readdir: Readdir
 
   /**
-   * Read the contents of the directory at `path`.
+   * Compute a canonical pathname by resolving `.`, `..`, and symbolic links.
    *
-   * @see {@linkcode Dirent}
-   *
-   * @this {void}
-   *
-   * @param {string} path
-   *  Path to directory to read
-   * @param {{ withFileTypes: true }} options
-   *  Read options
-   * @param {true} options.withFileTypes
-   *  Return a list of dirent objects instead of strings or `Buffer`s
-   * @return {ReadonlyArray<Dirent>}
-   *  Directory content list
+   * @see {@linkcode Realpath}
    */
-  readdirSync(
-    this: void,
-    path: string,
-    options: { withFileTypes: true }
-  ): readonly Dirent[]
+  realpath: Realpath
+
+  /**
+   * Get information about a file system entry.
+   *
+   * @see {@linkcode Stat}
+   */
+  stat: Stat
 }
 
 export type { FileSystem as default }

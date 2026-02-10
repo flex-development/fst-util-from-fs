@@ -4,14 +4,11 @@
  */
 
 import type TestSubject from '#types/extensions'
+import type { List } from '@flex-development/fst-util-from-fs'
 
 describe('unit-d:types/Extensions', () => {
-  it('should extract Set<string>', () => {
-    expectTypeOf<TestSubject>().extract<Set<string>>().not.toBeNever()
-  })
-
-  it('should extract readonly string[]', () => {
-    expectTypeOf<TestSubject>().extract<readonly string[]>().not.toBeNever()
+  it('should extract List<string>', () => {
+    expectTypeOf<TestSubject>().extract<List<string>>().not.toBeNever()
   })
 
   it('should extract string', () => {

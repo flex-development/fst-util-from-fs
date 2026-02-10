@@ -4,30 +4,36 @@
  */
 
 import type TestSubject from '#interfaces/dirent'
-import type { EmptyArray } from '@flex-development/tutils'
+import type {
+  IsDirectory,
+  IsFile,
+  IsSymbolicLink
+} from '@flex-development/fst-util-from-fs'
 
 describe('unit-d:interfaces/Dirent', () => {
+  it('should match [isDirectory: IsDirectory]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('isDirectory')
+      .toEqualTypeOf<IsDirectory>()
+  })
+
+  it('should match [isFile: IsFile]', () => {
+    expectTypeOf<TestSubject>().toHaveProperty('isFile').toEqualTypeOf<IsFile>()
+  })
+
+  it('should match [isSymbolicLink: IsSymbolicLink]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('isSymbolicLink')
+      .toEqualTypeOf<IsSymbolicLink>()
+  })
+
   it('should match [name: string]', () => {
     expectTypeOf<TestSubject>().toHaveProperty('name').toEqualTypeOf<string>()
   })
 
-  describe('isDirectory', () => {
-    type Subject = TestSubject['isDirectory']
-
-    it('should match [this: void]', () => {
-      expectTypeOf<Subject>().thisParameter.toEqualTypeOf<void>()
-    })
-
-    describe('parameters', () => {
-      it('should be callable with []', () => {
-        expectTypeOf<Subject>().parameters.toEqualTypeOf<EmptyArray>()
-      })
-    })
-
-    describe('returns', () => {
-      it('should return boolean', () => {
-        expectTypeOf<Subject>().returns.toEqualTypeOf<boolean>()
-      })
-    })
+  it('should match [parentPath: string]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('parentPath')
+      .toEqualTypeOf<string>()
   })
 })

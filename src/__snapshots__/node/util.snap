@@ -1,0 +1,189 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`unit:fromFileSystem > fs (default) > should return non-empty filtered tree (0) 1`] = `
+root[36]
+│ path: "\${process.cwd()}/"
+├─0  file<.attw.json> null
+├─1  file<.codecov.yml> null
+├─2  file<.commitlintrc.ts> null
+├─3  file<.cspell.json> null
+├─4  file<.dictionary.txt> null
+├─5  file<.dprint.jsonc> null
+├─6  file<.DS_Store> null
+├─7  file<.editorconfig> null
+├─8  file<.env.repo> null
+├─9  file<.env.vars> null
+├─10 file<.env.zsh> null
+├─11 file<.gitattributes> null
+├─12 file<.gitignore> null
+├─13 file<.nvmrc> null
+├─14 file<.remarkignore> null
+├─15 file<.yarnrc.yml> null
+├─16 file<Brewfile> null
+├─17 file<CHANGELOG.md> null
+├─18 file<CODE_OF_CONDUCT.md> null
+├─19 file<codecov> null
+├─20 file<CONTRIBUTING.md> null
+├─21 file<eslint.config.mjs> null
+├─22 file<glob.scratch.mts> null
+├─23 file<grease.config.json> null
+├─24 file<LICENSE.md> null
+├─25 file<package.json> null
+├─26 file<README.md> null
+├─27 file<scratch.mts> null
+├─28 file<tsconfig.build.json> null
+├─29 file<tsconfig.json> null
+├─30 file<tsconfig.test.json> null
+├─31 file<tsconfig.typecheck.json> null
+├─32 file<vite.config.mts> null
+├─33 file<vitest-env.d.mts> null
+├─34 file<vitest.config.mts> null
+└─35 file<yarn.lock> null
+`;
+
+exports[`unit:fromFileSystem > fs (default) > should return non-empty filtered tree (1) 1`] = `
+root[1]
+│ path: "\${process.cwd()}/"
+└─0 directory<src>[6]
+    ├─0 directory<interfaces>[17]
+    │   ├─0  file<dirent.mts> ""
+    │   ├─1  file<file-system-entries.mts> ""
+    │   ├─2  file<file-system.mts> ""
+    │   ├─3  file<filters.mts> ""
+    │   ├─4  file<handles.mts> ""
+    │   ├─5  file<index.mts> ""
+    │   ├─6  file<is-directory.mts> ""
+    │   ├─7  file<is-file.mts> ""
+    │   ├─8  file<is-symbolic-link.mts> ""
+    │   ├─9  file<options.mts> ""
+    │   ├─10 file<read-file.mts> ""
+    │   ├─11 file<readdir-dirent-options.mts> ""
+    │   ├─12 file<readdir-options.mts> ""
+    │   ├─13 file<readdir.mts> ""
+    │   ├─14 file<realpath.mts> ""
+    │   ├─15 file<stat.mts> ""
+    │   └─16 file<stats.mts> ""
+    ├─1 directory<internal>[12]
+    │   ├─0  file<chain-or-call.mts> ""
+    │   ├─1  file<combine-paths.mts> ""
+    │   ├─2  file<constant.mts> ""
+    │   ├─3  file<empty-array.mts> ""
+    │   ├─4  file<empty-file-system-entries.mts> ""
+    │   ├─5  file<fs.browser.mts> ""
+    │   ├─6  file<fs.d.mts> ""
+    │   ├─7  file<fs.node.mts> ""
+    │   ├─8  file<identity.mts> ""
+    │   ├─9  file<is-promise.mts> ""
+    │   ├─10 file<visit-directory.mts> ""
+    │   └─11 file<with-trailing-slash.mts> ""
+    ├─2 directory<types>[10]
+    │   ├─0 file<awaitable.mts> ""
+    │   ├─1 file<extensions.mts> ""
+    │   ├─2 file<filter.mts> ""
+    │   ├─3 file<get-file-system-entries.mts> ""
+    │   ├─4 file<handle.mts> ""
+    │   ├─5 file<index.mts> ""
+    │   ├─6 file<list.mts> ""
+    │   ├─7 file<sort.mts> ""
+    │   ├─8 file<to-visit-key.mts> ""
+    │   └─9 file<visit-map.mts> ""
+    ├─3 directory<utils>[2]
+    │   ├─0 file<get-file-system-entries.mts> ""
+    │   └─1 file<index.mts> ""
+    ├─4 file<index.mts> ""
+    └─5 file<util.mts> ""
+`;
+
+exports[`unit:fromFileSystem > fs (only async) > should return non-empty filtered tree (0) 1`] = `
+root[36]
+│ path: "\${process.cwd()}/"
+├─0  file<.attw.json> null
+├─1  file<.codecov.yml> null
+├─2  file<.commitlintrc.ts> null
+├─3  file<.cspell.json> null
+├─4  file<.dictionary.txt> null
+├─5  file<.dprint.jsonc> null
+├─6  file<.DS_Store> null
+├─7  file<.editorconfig> null
+├─8  file<.env.repo> null
+├─9  file<.env.vars> null
+├─10 file<.env.zsh> null
+├─11 file<.gitattributes> null
+├─12 file<.gitignore> null
+├─13 file<.nvmrc> null
+├─14 file<.remarkignore> null
+├─15 file<.yarnrc.yml> null
+├─16 file<Brewfile> null
+├─17 file<CHANGELOG.md> null
+├─18 file<CODE_OF_CONDUCT.md> null
+├─19 file<codecov> null
+├─20 file<CONTRIBUTING.md> null
+├─21 file<eslint.config.mjs> null
+├─22 file<glob.scratch.mts> null
+├─23 file<grease.config.json> null
+├─24 file<LICENSE.md> null
+├─25 file<package.json> null
+├─26 file<README.md> null
+├─27 file<scratch.mts> null
+├─28 file<tsconfig.build.json> null
+├─29 file<tsconfig.json> null
+├─30 file<tsconfig.test.json> null
+├─31 file<tsconfig.typecheck.json> null
+├─32 file<vite.config.mts> null
+├─33 file<vitest-env.d.mts> null
+├─34 file<vitest.config.mts> null
+└─35 file<yarn.lock> null
+`;
+
+exports[`unit:fromFileSystem > fs (only async) > should return non-empty filtered tree (1) 1`] = `
+root[1]
+│ path: "\${process.cwd()}/"
+└─0 directory<src>[6]
+    ├─0 directory<interfaces>[17]
+    │   ├─0  file<dirent.mts> ""
+    │   ├─1  file<file-system-entries.mts> ""
+    │   ├─2  file<file-system.mts> ""
+    │   ├─3  file<filters.mts> ""
+    │   ├─4  file<handles.mts> ""
+    │   ├─5  file<index.mts> ""
+    │   ├─6  file<is-directory.mts> ""
+    │   ├─7  file<is-file.mts> ""
+    │   ├─8  file<is-symbolic-link.mts> ""
+    │   ├─9  file<options.mts> ""
+    │   ├─10 file<read-file.mts> ""
+    │   ├─11 file<readdir-dirent-options.mts> ""
+    │   ├─12 file<readdir-options.mts> ""
+    │   ├─13 file<readdir.mts> ""
+    │   ├─14 file<realpath.mts> ""
+    │   ├─15 file<stat.mts> ""
+    │   └─16 file<stats.mts> ""
+    ├─1 directory<internal>[12]
+    │   ├─0  file<chain-or-call.mts> ""
+    │   ├─1  file<combine-paths.mts> ""
+    │   ├─2  file<constant.mts> ""
+    │   ├─3  file<empty-array.mts> ""
+    │   ├─4  file<empty-file-system-entries.mts> ""
+    │   ├─5  file<fs.browser.mts> ""
+    │   ├─6  file<fs.d.mts> ""
+    │   ├─7  file<fs.node.mts> ""
+    │   ├─8  file<identity.mts> ""
+    │   ├─9  file<is-promise.mts> ""
+    │   ├─10 file<visit-directory.mts> ""
+    │   └─11 file<with-trailing-slash.mts> ""
+    ├─2 directory<types>[10]
+    │   ├─0 file<awaitable.mts> ""
+    │   ├─1 file<extensions.mts> ""
+    │   ├─2 file<filter.mts> ""
+    │   ├─3 file<get-file-system-entries.mts> ""
+    │   ├─4 file<handle.mts> ""
+    │   ├─5 file<index.mts> ""
+    │   ├─6 file<list.mts> ""
+    │   ├─7 file<sort.mts> ""
+    │   ├─8 file<to-visit-key.mts> ""
+    │   └─9 file<visit-map.mts> ""
+    ├─3 directory<utils>[2]
+    │   ├─0 file<get-file-system-entries.mts> ""
+    │   └─1 file<index.mts> ""
+    ├─4 file<index.mts> ""
+    └─5 file<util.mts> ""
+`;

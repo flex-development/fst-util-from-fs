@@ -4,6 +4,8 @@
  */
 
 import type TestSubject from '#types/filter'
+import type { AnyParent as Parent, Root } from '@flex-development/fst'
+import type { Dirent } from '@flex-development/fst-util-from-fs'
 
 describe('unit-d:types/Filter', () => {
   it('should match [this: void]', () => {
@@ -11,8 +13,12 @@ describe('unit-d:types/Filter', () => {
   })
 
   describe('parameters', () => {
-    it('should be callable with [string]', () => {
-      expectTypeOf<TestSubject>().parameters.toEqualTypeOf<[string]>()
+    it('should be callable with [string, number | null | undefined, Dirent, AnyParent, Root]', () => {
+      // Arrange
+      type Expect = [string, number | null | undefined, Dirent, Parent, Root]
+
+      // Expect
+      expectTypeOf<TestSubject>().parameters.toEqualTypeOf<Expect>()
     })
   })
 

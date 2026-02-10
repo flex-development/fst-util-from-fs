@@ -3,9 +3,13 @@
  * @module fst-util-from-fs/types/Extensions
  */
 
+import type { List } from '@flex-development/fst-util-from-fs'
+
 /**
  * Union of options to filter matched files by file extension.
+ *
+ * @see {@linkcode List}
  */
-type Extensions = Set<string> | readonly string[] | string
+type Extensions = List<string> | string
 
 export type { Extensions as default }

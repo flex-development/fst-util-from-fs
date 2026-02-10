@@ -13,11 +13,11 @@ import type { Child } from '@flex-development/fst'
  * @this {void}
  *
  * @param {Child} a
- *  Current child node
+ *  The current child node
  * @param {Child} b
- *  Next child node
+ *  The next child node
  * @return {number}
- *  Comparison result
+ *  The comparison result
  */
 type Sort = (this: void, a: Child, b: Child) => number
 

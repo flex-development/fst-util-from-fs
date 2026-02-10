@@ -21,12 +21,5 @@
   },
   "exclude": ["coverage", "dist", "node_modules"],
   "extends": "@tsconfig/strictest/tsconfig.json",
-  "include": ["**/**.json", "**/**.mjs", "**/**.mts", "**/**.ts"],
-  "mdx": {
-    "plugins": [
-      "remark-directive",
-      "remark-frontmatter",
-      "remark-gfm"
-    ]
-  }
+  "include": ["**/**.json", "**/**.mjs", "**/**.mts", "**/**.ts"]
 }

@@ -2,13 +2,13 @@ declare module '#internal/fs' {
   import type { FileSystem } from '@flex-development/fst-util-from-fs'
 
   /**
-   * File system API.
+   * The file system API.
    *
    * @internal
    *
-   * @const {Required<FileSystem>} fs
+   * @const {FileSystem} fs
    */
-  const fs: Required<FileSystem>
+  const fs: FileSystem
 
   export default fs
 }

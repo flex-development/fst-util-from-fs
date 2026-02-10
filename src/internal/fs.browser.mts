@@ -6,33 +6,46 @@
 import type { FileSystem } from '@flex-development/fst-util-from-fs'
 
 /**
- * File system API.
+ * The file system API.
+ *
+ * @see {@linkcode FileSystem}
  *
  * @internal
  *
- * @const {Required<FileSystem>} fs
+ * @const {FileSystem} fs
  */
-const fs: Required<FileSystem> = {
+const fs: FileSystem = {
   /**
-   * Get the contents of a file.
+   * Read the entire contents of a directory.
    *
    * @return {never}
    *  Never; not implemented
    * @throws {Error}
    */
-  readFileSync(): never {
-    throw new Error('[readFileSync] not implemented')
+  readdir(): never {
+    throw new Error('[readdir] not implemented')
   },
 
   /**
-   * Read the contents of a directory.
+   * Compute a canonical pathname by resolving `.`, `..`, and symbolic links.
    *
    * @return {never}
    *  Never; not implemented
    * @throws {Error}
    */
-  readdirSync(): never {
-    throw new Error('[readdirSync] not implemented')
+  realpath(): never {
+    throw new Error('[realpath] not implemented')
+  },
+
+  /**
+   * Get information about a file system entry.
+   *
+   * @return {never}
+   *  Never; not implemented
+   * @throws {Error}
+   */
+  stat(): never {
+    throw new Error('[stat] not implemented')
   }
 }
 

@@ -5,30 +5,28 @@
 
 import type TestSubject from '#interfaces/options'
 import type {
+  Extensions,
   FileSystem,
   Filters,
+  GetFileSystemEntries,
   Handles,
-  Sort
+  Sort,
+  ToVisitKey,
+  VisitMap
 } from '@flex-development/fst-util-from-fs'
 import type { Nilable } from '@flex-development/tutils'
 
 describe('unit-d:interfaces/Options', () => {
-  it('should match [content?: boolean | null | undefined]', () => {
-    expectTypeOf<TestSubject>()
-      .toHaveProperty('content')
-      .toEqualTypeOf<Nilable<boolean>>
-  })
-
   it('should match [depth?: number | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('depth')
       .toEqualTypeOf<Nilable<number>>
   })
 
-  it('should match [extensions?: Set<string> | readonly string[] | string | null | undefined]', () => {
+  it('should match [extensions?: Extensions | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('extensions')
-      .toEqualTypeOf<Nilable<Set<string> | readonly string[] | string>>
+      .toEqualTypeOf<Nilable<Extensions>>
   })
 
   it('should match [filters?: Filters | null | undefined]', () => {
@@ -37,10 +35,16 @@ describe('unit-d:interfaces/Options', () => {
       .toEqualTypeOf<Nilable<Filters>>
   })
 
-  it('should match [fs?: Partial<FileSystem> | null | undefined]', () => {
+  it('should match [fs?: FileSystem | null | undefined]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('fs')
-      .toEqualTypeOf<Nilable<Partial<FileSystem>>>
+      .toEqualTypeOf<Nilable<FileSystem>>
+  })
+
+  it('should match [getFileSystemEntries?: GetFileSystemEntries | null | undefined]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('getFileSystemEntries')
+      .toEqualTypeOf<Nilable<GetFileSystemEntries>>
   })
 
   it('should match [handles?: Handles | null | undefined]', () => {
@@ -59,5 +63,17 @@ describe('unit-d:interfaces/Options', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('sort')
       .toEqualTypeOf<Nilable<Sort>>
+  })
+
+  it('should match [visitKey?: ToVisitKey | null | undefined]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('visitKey')
+      .toEqualTypeOf<Nilable<ToVisitKey>>
+  })
+
+  it('should match [visited?: VisitMap | null | undefined]', () => {
+    expectTypeOf<TestSubject>()
+      .toHaveProperty('visited')
+      .toEqualTypeOf<Nilable<VisitMap>>
   })
 })
