@@ -21,7 +21,7 @@ interface Realpath {
    * @this {unknown}
    *
    * @param {URL | string} id
-   *  The module id
+   *  The entry id
    * @return {T}
    *  The canonical pathname
    */

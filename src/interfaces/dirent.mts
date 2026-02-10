@@ -17,7 +17,7 @@ import type {
  * @example
  *  declare module '@flex-development/fst-util-from-fs' {
  *    interface Dirent {
- *      custom: string
+ *      parentPath: string
  *    }
  *  }
  */
@@ -44,16 +44,9 @@ interface Dirent {
   isSymbolicLink: IsSymbolicLink
 
   /**
-   * The path to the entry, relative to the {@linkcode parentPath}.
-   *
-   * If the dirent refers to a file, the file extension should be included.
+   * The path to the entry, relative to its parent directory.
    */
   name: string
-
-  /**
-   * The path to the parent directory.
-   */
-  parentPath: string
 }
 
 export type { Dirent as default }

@@ -11,7 +11,7 @@ import type {
 } from '@flex-development/fst-util-from-fs'
 
 /**
- * Handle a `node`.
+ * Handle a `node` that has been added to the `tree`.
  *
  * @see {@linkcode Awaitable}
  * @see {@linkcode Child}
@@ -27,17 +27,17 @@ import type {
  * @this {void}
  *
  * @param {T} node
- *  The file system entry node
+ *  The node representing the file system entry
  * @param {Dirent} dirent
  *  The dirent representing the file system entry
  * @param {Parent} parent
  *  The parent of `node`
  * @param {Root} tree
- *  The file system tree
+ *  The current file system tree
  * @param {Parent[]} ancestors
- *  The ancestors of `node`
+ *  The ancestors of `node`, with the last node being `parent`
  * @param {FileSystem} fs
- *  The file system adapter
+ *  The file system API
  * @return {Result}
  */
 type Handle<

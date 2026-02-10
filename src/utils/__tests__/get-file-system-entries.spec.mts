@@ -55,8 +55,7 @@ describe('unit:utils/getFileSystemEntries', () => {
           isDirectory: constant(true),
           isFile: constant(false),
           isSymbolicLink: constant(false),
-          name,
-          parentPath: pathe.cwd()
+          name
         })
       }
 
@@ -65,8 +64,7 @@ describe('unit:utils/getFileSystemEntries', () => {
           isDirectory: constant(false),
           isFile: constant(true),
           isSymbolicLink: constant(name === files.at(-1)),
-          name,
-          parentPath: pathe.cwd()
+          name
         })
       }
 
@@ -76,8 +74,7 @@ describe('unit:utils/getFileSystemEntries', () => {
           isDirectory: constant(false),
           isFile: constant(true),
           isSymbolicLink: constant(true),
-          name: badfile,
-          parentPath: pathe.cwd()
+          name: badfile
         }
       ]
 
@@ -85,8 +82,7 @@ describe('unit:utils/getFileSystemEntries', () => {
         isDirectory: constant(false),
         isFile: constant(false),
         isSymbolicLink: constant(false),
-        name: 'unknown',
-        parentPath: pathe.cwd()
+        name: 'unknown'
       })
     })
 

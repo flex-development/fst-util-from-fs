@@ -7,7 +7,7 @@ import type { Directory, File } from '@flex-development/fst'
 import type { Handle } from '@flex-development/fst-util-from-fs'
 
 /**
- * A node handler registry.
+ * The callbacks to fire after a node is added to a tree.
  */
 interface Handles {
   /**

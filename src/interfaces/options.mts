@@ -35,14 +35,14 @@ interface Options {
   extensions?: Extensions | null | undefined
 
   /**
-   * Path filters to determine if nodes should be added to the tree.
+   * The filters used to determine if nodes should be added to the tree.
    *
    * @see {@linkcode Filters}
    */
   filters?: Filters | null | undefined
 
   /**
-   * The file system adapter.
+   * The file system API.
    *
    * @see {@linkcode FileSystem}
    */
@@ -56,7 +56,7 @@ interface Options {
   getFileSystemEntries?: GetFileSystemEntries | null | undefined
 
   /**
-   * Node handlers.
+   * The callbacks to fire after a node is added to the tree.
    *
    * @see {@linkcode Handles}
    */
@@ -89,7 +89,7 @@ interface Options {
   visitKey?: ToVisitKey | null | undefined
 
   /**
-   * Map indicating which directories have already been searched.
+   * The map indicating which directories have already been searched.
    *
    * @default
    *  new Map()

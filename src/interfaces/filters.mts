@@ -6,7 +6,7 @@
 import type { Filter } from '@flex-development/fst-util-from-fs'
 
 /**
- * A node filter registry.
+ * The filters used to determine if a node should be added to a tree.
  */
 interface Filters {
   /**

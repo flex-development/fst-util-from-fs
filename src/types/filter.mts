@@ -7,7 +7,7 @@ import type { AnyParent as Parent, Root } from '@flex-development/fst'
 import type { Dirent } from '@flex-development/fst-util-from-fs'
 
 /**
- * Determine if a node for `path` should be added to a file system `tree`.
+ * Determine if a node for `path` should be added to the `tree`.
  *
  * @see {@linkcode Dirent}
  * @see {@linkcode Parent}
@@ -16,13 +16,13 @@ import type { Dirent } from '@flex-development/fst-util-from-fs'
  * @this {void}
  *
  * @param {string} path
- *  The path to the entry, relative to its parent directory
+ *  The path to the file system entry, relative to its parent directory
  * @param {number | null | undefined} depth
  *  The current search depth
  * @param {Dirent} dirent
  *  The dirent representing the file system entry
  * @param {Parent} parent
- *  The parent node
+ *  The current parent node
  * @param {Root} tree
  *  The file system tree
  * @return {boolean}

@@ -6,7 +6,7 @@
 import type { List } from '@flex-development/fst-util-from-fs'
 
 /**
- * Union of options to filter matched files by file extension.
+ * Union of options used to filter files by extension.
  *
  * @see {@linkcode List}
  */

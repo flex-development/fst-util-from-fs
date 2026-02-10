@@ -6,7 +6,7 @@
 import type { Child } from '@flex-development/fst'
 
 /**
- * Compare node `a` to `b`.
+ * Decide how two nodes should be sorted.
  *
  * @see {@linkcode Child}
  *

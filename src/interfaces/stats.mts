@@ -7,6 +7,15 @@ import type { IsDirectory, IsFile } from '@flex-development/fst-util-from-fs'
 
 /**
  * Information about a file system entry.
+ *
+ * This interface can be augmented to register custom methods and properties.
+ *
+ * @example
+ *  declare module '@flex-development/fst-util-from-fs' {
+ *    interface Stats {
+ *      size: bigint | number
+ *    }
+ *  }
  */
 interface Stats {
   /**

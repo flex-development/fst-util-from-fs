@@ -6,7 +6,7 @@
 import type { Dirent } from '@flex-development/fst-util-from-fs'
 
 /**
- * An object containing information about directories and files.
+ * Information about directories and files.
  */
 interface FileSystemEntries {
   /**

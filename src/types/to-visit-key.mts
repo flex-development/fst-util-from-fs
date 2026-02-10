@@ -7,7 +7,7 @@ import type { AnyParent as Parent, Root } from '@flex-development/fst'
 import type { Options } from '@flex-development/fst-util-from-fs'
 
 /**
- * Get a visit map key for a canonical pathname.
+ * Get a visit map key for a pathname.
  *
  * @see {@linkcode Options}
  * @see {@linkcode Parent}
