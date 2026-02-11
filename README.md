@@ -90,7 +90,278 @@ In browsers with [`esm.sh`][esmsh]:
 
 ## Use
 
-**TODO**: use
+```ts
+import type {
+  File,
+  AnyParent as Parent,
+  Root
+} from '@flex-development/fst'
+import {
+  fromFileSystem,
+  type Dirent,
+  type FileSystem,
+  type Stats
+} from '@flex-development/fst-util-from-fs'
+import pathe from '@flex-development/pathe'
+import { inspect } from '@flex-development/unist-util-inspect'
+import { ok } from 'devlop'
+import fs from 'node:fs'
+import { size } from 'unist-util-size'
+
+declare module '@flex-development/fst' {
+  interface File {
+    /**
+     * The size of the file.
+     */
+    size?: bigint | number | undefined
+  }
+}
+
+declare module '@flex-development/fst-util-from-fs' {
+  interface Stats {
+    /**
+     * The size of the entry.
+     */
+    size: bigint | number
+  }
+}
+
+/**
+ * A glob pattern matching directories to search
+ * and files to include in the tree.
+ *
+ * @const {string} pattern
+ */
+const pattern: string = 'src/**/**'
+
+/**
+ * The file system tree.
+ *
+ * @const {Root} tree
+ */
+const tree: Root = await fromFileSystem({
+  extensions: '.mts',
+  filters: {
+    /**
+     * @this {void}
+     *
+     * @param {string} path
+     *  The path to the directory, relative to `tree.path`
+     * @param {number | null | undefined} depth
+     *  The current search depth
+     * @param {Dirent} dirent
+     *  The dirent representing the file system entry
+     * @param {Parent} parent
+     *  The parent node
+     * @param {Root} tree
+     *  The file system tree
+     * @return {boolean}
+     *  `true` if node for `path` should be added, `false` otherwise
+     */
+    directory(
+      this: void,
+      path: string,
+      depth: number | null | undefined,
+      dirent: Dirent,
+      parent: Parent,
+      tree: Root
+    ): boolean {
+      return pathe.matchesGlob(path, pattern, {
+        cwd: tree.path,
+        dot: false,
+        ignore: ['**/__mocks__/**', '**/__snapshots__/**', '**/__tests__/**'],
+        noglobstar: false
+      })
+    },
+
+    /**
+     * @this {void}
+     *
+     * @param {string} path
+     *  The path to the file, relative to `tree.path`
+     * @param {number | null | undefined} depth
+     *  The current search depth
+     * @param {Dirent} dirent
+     *  The dirent representing the file system entry
+     * @param {Parent} parent
+     *  The parent node
+     * @param {Root} tree
+     *  The file system tree
+     * @return {boolean}
+     *  `true` if node for `path` should be added, `false` otherwise
+     */
+    file(
+      this: void,
+      path: string,
+      depth: number | null | undefined,
+      dirent: Dirent,
+      parent: Parent,
+      tree: Root
+    ): boolean {
+      return pathe.matchesGlob(path, pattern, {
+        cwd: tree.path,
+        dot: true,
+        ignore: ['**/.DS_Store'],
+        noglobstar: false
+      })
+    }
+  },
+  fs: fs.promises,
+  handles: {
+    /**
+     * @async
+     *
+     * @this {void}
+     *
+     * @param {File} node
+     *  The node representing the file
+     * @param {Dirent} dirent
+     *  The dirent representing the file
+     * @param {Parent} parent
+     *  The parent of `node`
+     * @param {Root} tree
+     *  The current file system tree
+     * @param {Parent[]} ancestors
+     *  The ancestors of `node`, with the last node being `parent`
+     * @param {FileSystem} fs
+     *  The file system API
+     * @return {Promise<undefined>}
+     */
+    async file(
+      this: void,
+      node: File,
+      dirent: Dirent,
+      parent: Parent,
+      tree: Root,
+      ancestors: Parent[],
+      fs: FileSystem
+    ): Promise<undefined> {
+      /**
+       * The list of relative ancestor paths.
+       *
+       * @const {string[]} paths
+       */
+      const paths: string[] = [...ancestors.slice(1), node].map(n => {
+        ok(n.type !== 'root', 'did not expect tree')
+        return n.name
+      })
+
+      /**
+       * Info about the file.
+       *
+       * @const {Stats} stats
+       */
+      const stats: Stats = await fs.stat(pathe.join(tree.path, ...paths))
+
+      return node.size = stats.size, void node
+    }
+  }
+})
+
+console.log(inspect(tree))
+console.dir(size(tree))
+console.dir(size(tree, node => node.type === 'directory'))
+console.dir(size(tree, node => node.type === 'file'))
+```
+
+...yields
+
+```sh
+root[1]
+│ path: "/Users/lex/Projects/flex-development/fst-util-from-fs/"
+└─0 directory<src>[6]
+    ├─0 directory<interfaces>[16]
+    │   ├─0  file<dirent.mts> null
+    │   │      size: 950
+    │   ├─1  file<file-system-entries.mts> null
+    │   │      size: 559
+    │   ├─2  file<file-system.mts> null
+    │   │      size: 643
+    │   ├─3  file<filters.mts> null
+    │   │      size: 583
+    │   ├─4  file<handles.mts> null
+    │   │      size: 640
+    │   ├─5  file<index.mts> null
+    │   │      size: 1102
+    │   ├─6  file<is-directory.mts> null
+    │   │      size: 345
+    │   ├─7  file<is-file.mts> null
+    │   │      size: 315
+    │   ├─8  file<is-symbolic-link.mts> null
+    │   │      size: 365
+    │   ├─9  file<options.mts> null
+    │   │      size: 2052
+    │   ├─10 file<readdir-dirent-options.mts> null
+    │   │      size: 744
+    │   ├─11 file<readdir-options.mts> null
+    │   │      size: 594
+    │   ├─12 file<readdir.mts> null
+    │   │      size: 798
+    │   ├─13 file<realpath.mts> null
+    │   │      size: 743
+    │   ├─14 file<stat.mts> null
+    │   │      size: 566
+    │   └─15 file<stats.mts> null
+    │          size: 704
+    ├─1 directory<internal>[12]
+    │   ├─0  file<chain-or-call.mts> null
+    │   │      size: 2656
+    │   ├─1  file<combine-paths.mts> null
+    │   │      size: 1579
+    │   ├─2  file<constant.mts> null
+    │   │      size: 413
+    │   ├─3  file<empty-array.mts> null
+    │   │      size: 260
+    │   ├─4  file<empty-file-system-entries.mts> null
+    │   │      size: 524
+    │   ├─5  file<fs.browser.mts> null
+    │   │      size: 973
+    │   ├─6  file<fs.d.mts> null
+    │   │      size: 241
+    │   ├─7  file<fs.node.mts> null
+    │   │      size: 414
+    │   ├─8  file<identity.mts> null
+    │   │      size: 351
+    │   ├─9  file<is-promise.mts> null
+    │   │      size: 640
+    │   ├─10 file<visit-directory.mts> null
+    │   │      size: 10232
+    │   └─11 file<with-trailing-slash.mts> null
+    │          size: 1357
+    ├─2 directory<types>[10]
+    │   ├─0 file<awaitable.mts> null
+    │   │     size: 269
+    │   ├─1 file<extensions.mts> null
+    │   │     size: 323
+    │   ├─2 file<filter.mts> null
+    │   │     size: 1006
+    │   ├─3 file<get-file-system-entries.mts> null
+    │   │     size: 847
+    │   ├─4 file<handle.mts> null
+    │   │     size: 1347
+    │   ├─5 file<index.mts> null
+    │   │     size: 628
+    │   ├─6 file<list.mts> null
+    │   │     size: 241
+    │   ├─7 file<sort.mts> null
+    │   │     size: 455
+    │   ├─8 file<to-visit-key.mts> null
+    │   │     size: 1083
+    │   └─9 file<visit-map.mts> null
+    │         size: 321
+    ├─3 directory<utils>[2]
+    │   ├─0 file<get-file-system-entries.mts> null
+    │   │     size: 5805
+    │   └─1 file<index.mts> null
+    │         size: 157
+    ├─4 file<index.mts> null
+    │     size: 189
+    └─5 file<util.mts> null
+          size: 2055
+47 # total number of nodes
+5  # total number of directory nodes
+42 # total number of file nodes
+```
 
 ## API
 
@@ -101,6 +372,10 @@ There is no default export.
 ### `fromFileSystem<T>([options])`
 
 Create a file system tree.
+
+> 👉 **Note**: Returns a promise if one of the following methods returns a promise:
+> [`fs.realpath`](#realpath), [`options.getFileSystemEntries`](#getfilesystementriestparent-fs),
+> [`options.handles.directory`](#handlet-result), [`options.handlers.file`](#handlet-result).
 
 #### Type Parameters
 
@@ -128,7 +403,10 @@ There is no default export.
 
 Get a record of accessible file system entries.
 
-> 👉 **Note**: Entries are relative to `parent`.
+Entries are relative to `parent`.
+
+> 👉 **Note**: Returns a promise if [`fs.readdir`](#readdir) returns a promise,
+> or any symbolic links are encountered and [`fs.stat`](#stat) returns a promise.
 
 #### Type Parameters
 
@@ -202,9 +480,9 @@ Information about directories and files (`interface`).
 
 #### Properties
 
-- `directories` ([`readonly Dirent[]`](#dirent))
+- `directories` ([`List<Dirent>`](#dirent))
   — the list of directories
-- `files` ([`readonly Dirent[]`](#dirent))
+- `files` ([`List<Dirent>`](#dirent))
   — the list of files
 
 ### `FileSystem`

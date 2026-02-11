@@ -24,7 +24,10 @@ export default getFileSystemEntries
 /**
  * Get a record of accessible file system entries.
  *
- * > 👉 **Note**: Entries are relative to `parent`.
+ * Entries are relative to `parent`.
+ *
+ * > 👉 **Note**: Returns a promise if `fs.readdir` returns a promise,
+ * > or any symbolic links are encountered and `fs.stat` returns a promise.
  *
  * @template {Awaitable<FileSystemEntries>} T
  *  The entries record
@@ -47,7 +50,10 @@ function getFileSystemEntries<T extends Awaitable<FileSystemEntries>>(
 /**
  * Get a record of accessible file system entries.
  *
- * > 👉 **Note**: Entries are relative to `parent`.
+ * Entries are relative to `parent`.
+ *
+ * > 👉 **Note**: Returns a promise if `fs.readdir` returns a promise,
+ * > or any symbolic links are encountered and `fs.stat` returns a promise.
  *
  * @this {void}
  *

@@ -16,6 +16,10 @@ export default fromFileSystem
 /**
  * Create a file system tree.
  *
+ * > 👉 **Note**: Returns a promise if one of the following methods
+ * > returns a promise: `fs.realpath`, `options.getFileSystemEntries`,
+ * > `options.handles.directory`, `options.handlers.file`.
+ *
  * @see {@linkcode Awaitable}
  * @see {@linkcode Options}
  * @see {@linkcode Root}
@@ -37,6 +41,10 @@ function fromFileSystem<T extends Awaitable<Root>>(
 
 /**
  * Create a file system tree.
+ *
+ * > 👉 **Note**: Returns a promise if one of the following methods
+ * > returns a promise: `fs.realpath`, `options.getFileSystemEntries`,
+ * > `options.handles.directory`, `options.handlers.file`.
  *
  * @see {@linkcode Awaitable}
  * @see {@linkcode Options}
