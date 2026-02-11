@@ -1,7 +1,7 @@
 {
   "name": "@flex-development/fst-util-from-fs",
   "description": "fst utility to create trees from a file system",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-beta.1",
   "keywords": [
     "ast",
     "file-system",
