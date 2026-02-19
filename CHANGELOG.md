@@ -1,3 +1,14 @@
+## [1.0.0-beta.2](https://github.com/flex-development/fst-util-from-fs/compare/1.0.0-beta.1...1.0.0-beta.2) (2026-02-18)
+
+### :package: Build
+
+- [[`4ad2c56`](https://github.com/flex-development/fst-util-from-fs/commit/4ad2c5670beb47baa6db682ad448ba64426a8f7b)] **deps:** bump tar from 7.5.7 to 7.5.9 ([#174](https://github.com/flex-development/fst-util-from-fs/issues/174))
+- [[`72d57a3`](https://github.com/flex-development/fst-util-from-fs/commit/72d57a386b20901a2d2217230657be657dc5b57b)] **deps:** use @flex-development/when
+
+### :white_check_mark: Testing
+
+- [[`27362e9`](https://github.com/flex-development/fst-util-from-fs/commit/27362e99461cdf77bd5ca15b56542af4b62650a0)] add `edge-runtime` environment tests
+
 ## [1.0.0-beta.1](https://github.com/flex-development/fst-util-from-fs/compare/1.0.0-alpha.1...1.0.0-beta.1) (2026-02-10)
 
 ### ⚠ BREAKING CHANGES
@@ -173,6 +184,7 @@
 ### :mechanical_arm: Refactors
 
 - [[`e1e2279`](https://github.com/flex-development/fst-util-from-fs/commit/e1e2279f829efeaf7357b76852b29d29da40c91e)] **util:** allow search `depth` to be `0`
+
 
 
 
