@@ -7,7 +7,6 @@ import content from '#fixtures/content.json'
 import fsa from '#fixtures/fsa'
 import constant from '#internal/constant'
 import emptyFileSystemEntries from '#internal/empty-file-system-entries'
-import isPromise from '#internal/is-promise'
 import withTrailingSlash from '#internal/with-trailing-slash'
 import volume from '#tests/setup/volume'
 import flattenContent, {
@@ -33,6 +32,7 @@ import pathe from '@flex-development/pathe'
 import { count, type Predicate } from '@flex-development/tutils'
 import { inspectNoColor } from '@flex-development/unist-util-inspect'
 import { visit } from '@flex-development/unist-util-visit'
+import { isThenable } from '@flex-development/when'
 import { ok } from 'devlop'
 import type { Node } from 'unist'
 import { size } from 'unist-util-size'
@@ -140,7 +140,7 @@ describe('unit:fromFileSystem', () => {
       let result = testSubject({ ...options, fs })
       if (isAsync) result = await result
 
-      ok(!isPromise(result), 'expected `result` to be resolved')
+      ok(!isThenable(result), 'expected `result` to be resolved')
 
       // Expect
       expect(result).to.have.property('children').be.an('array')
@@ -174,7 +174,7 @@ describe('unit:fromFileSystem', () => {
       let result = testSubject({ ...options, fs })
       if (isAsync) result = await result
 
-      ok(!isPromise(result), 'expected `result` to be resolved')
+      ok(!isThenable(result), 'expected `result` to be resolved')
 
       // Expect
       expect(result).to.have.property('children').be.an('array')
@@ -368,12 +368,12 @@ describe('unit:fromFileSystem', () => {
 
       // Expect (promises)
       if (isAsync) {
-        expect(result).to.satisfy(isPromise), result = await result
+        expect(result).to.satisfy(isThenable), result = await result
       } else {
-        expect(result).to.not.satisfy(isPromise)
+        expect(result).to.not.satisfy(isThenable)
       }
 
-      ok(!isPromise(result), 'expected `result` to be resolved')
+      ok(!isThenable(result), 'expected `result` to be resolved')
       directories = size(result, isDirectory)
       files = size(result, isFile)
       total = size(result)

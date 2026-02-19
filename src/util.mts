@@ -3,13 +3,13 @@
  * @module fst-util-from-fs/util
  */
 
-import chainOrCall from '#internal/chain-or-call'
 import visitDirectory from '#internal/visit-directory'
 import withTrailingSlash from '#internal/with-trailing-slash'
 import type { Root } from '@flex-development/fst'
 import type { Awaitable, Options } from '@flex-development/fst-util-from-fs'
 import pathe from '@flex-development/pathe'
 import { u } from '@flex-development/unist-util-builder'
+import when from '@flex-development/when'
 
 export default fromFileSystem
 
@@ -75,5 +75,5 @@ function fromFileSystem(
 
   tree.path = withTrailingSlash(pathe.toPath(tree.path))
 
-  return chainOrCall(visitDirectory(null, null, tree, [], options), () => tree)
+  return when(visitDirectory(null, null, tree, [], options), () => tree)
 }

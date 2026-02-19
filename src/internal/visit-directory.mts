@@ -3,11 +3,9 @@
  * @module tsconfig-utils/internal/visitDirectory
  */
 
-import chainOrCall from '#internal/chain-or-call'
 import combinePaths from '#internal/combine-paths'
 import dfs from '#internal/fs'
 import identity from '#internal/identity'
-import isPromise from '#internal/is-promise'
 import type {
   Child,
   Directory,
@@ -31,6 +29,7 @@ import type {
 import { getFileSystemEntries } from '@flex-development/fst-util-from-fs/utils'
 import pathe from '@flex-development/pathe'
 import { u } from '@flex-development/unist-util-builder'
+import { isThenable, when } from '@flex-development/when'
 
 export default visitDirectory
 
@@ -88,7 +87,7 @@ function visitDirectory(
    */
   const realpath: Awaitable<string> = fs.realpath(combinePaths(tree.path, dir))
 
-  return chainOrCall(realpath, (path = realpath as string) => {
+  return when(realpath, (path = realpath as string) => {
     /**
      * The {@linkcode visited} map key.
      *
@@ -122,7 +121,7 @@ function visitDirectory(
     entries = (options.getFileSystemEntries ?? getFileSystemEntries)(path, fs)
     ancestors.push(parent)
 
-    return chainOrCall(entries, visit, undefined, undefined, parent, fs)
+    return when(entries, visit, undefined, undefined, parent, fs)
 
     /**
      * @this {void}
@@ -210,7 +209,7 @@ function visitDirectory(
         )
 
         // store handle promise.
-        if (isPromise(result)) promises.push(result)
+        if (isThenable(result)) promises.push(result)
       }
 
       // decrease search depth.
@@ -263,7 +262,7 @@ function visitDirectory(
 
         // add directory node to tree.
         // eslint-disable-next-line unicorn/prefer-ternary
-        if (!isPromise(result)) {
+        if (!isThenable(result)) {
           result = add(handles, node, dirent, parent, tree, ancestors, fs)
         } else {
           result = result.then(() => {
@@ -272,7 +271,7 @@ function visitDirectory(
         }
 
         // store visit or handle promise.
-        if (isPromise(result)) promises.push(result)
+        if (isThenable(result)) promises.push(result)
       }
 
       /**

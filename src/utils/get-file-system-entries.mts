@@ -3,12 +3,10 @@
  * @module fst-util-from-fs/utils/getFileSystemEntries
  */
 
-import chainOrCall from '#internal/chain-or-call'
 import combinePaths from '#internal/combine-paths'
 import constant from '#internal/constant'
 import empty from '#internal/empty-file-system-entries'
 import dfs from '#internal/fs'
-import isPromise from '#internal/is-promise'
 import type {
   Awaitable,
   Dirent,
@@ -17,6 +15,7 @@ import type {
   Stats
 } from '@flex-development/fst-util-from-fs'
 import pathe from '@flex-development/pathe'
+import { isThenable, when } from '@flex-development/when'
 import { ok } from 'devlop'
 
 export default getFileSystemEntries
@@ -95,7 +94,7 @@ function getFileSystemEntries(
 
   try {
     content = fs.readdir(parent || pathe.dot, { withFileTypes: true })
-    return chainOrCall(content, entries, constant(empty), undefined, parent)
+    return when(content, entries, constant(empty), undefined, parent)
   } catch {
     return empty
   }
@@ -149,7 +148,7 @@ function getFileSystemEntries(
       }
 
       // collect `fs.stat` promise to add new entry during resolution.
-      if (isPromise(metadata)) {
+      if (isThenable(metadata)) {
         promises.push(metadata.then(stats => [item, stats], constant([item])))
         continue
       }

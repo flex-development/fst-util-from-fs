@@ -1636,6 +1636,7 @@ __metadata:
     "@flex-development/unist-util-inspect": "npm:1.1.0"
     "@flex-development/unist-util-types": "npm:1.6.1"
     "@flex-development/unist-util-visit": "npm:1.1.0"
+    "@flex-development/when": "npm:1.0.0"
     "@stdlib/utils-deep-set": "npm:0.2.2"
     "@tsconfig/strictest": "npm:2.0.8"
     "@types/chai": "npm:5.2.3"
@@ -2168,6 +2169,13 @@ __metadata:
     "@types/unist":
       optional: true
   checksum: 10/faa5501fb0649043ee9dfad9874d200647973b49da1f0a76a62cd4d92ca7a7410ac0d1c078fa06a6768b9686949c32d3f86ba9d416d0a84440e13979f8e30397
+  languageName: node
+  linkType: hard
+
+"@flex-development/when@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@flex-development/when@npm:1.0.0"
+  checksum: 10/3e71b9a00a93964223b6f36819553c226264ab2375933f6d8681dfd2302b3a21dc21aeed3d5230699d6bb35bd41e95872be5f45e8deadcb1fda4b43e35372e54
   languageName: node
   linkType: hard
 

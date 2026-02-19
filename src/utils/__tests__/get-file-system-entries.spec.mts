@@ -7,7 +7,6 @@ import fsa from '#fixtures/fsa'
 import constant from '#internal/constant'
 import emptyFileSystemEntries from '#internal/empty-file-system-entries'
 import dfs from '#internal/fs'
-import isPromise from '#internal/is-promise'
 import fsCaseType, { type FileSystemCaseType } from '#tests/utils/fs-case-type'
 import testSubject from '#utils/get-file-system-entries'
 import type {
@@ -19,6 +18,7 @@ import type {
   Stats
 } from '@flex-development/fst-util-from-fs'
 import pathe from '@flex-development/pathe'
+import { isThenable } from '@flex-development/when'
 import { ok } from 'devlop'
 import type { MockedFunction } from 'vitest'
 
@@ -148,9 +148,9 @@ describe('unit:utils/getFileSystemEntries', () => {
 
       // Expect (promises)
       if (isAsync) {
-        expect(result).to.satisfy(isPromise), result = await result
+        expect(result).to.satisfy(isThenable), result = await result
       } else {
-        expect(result).to.not.satisfy(isPromise)
+        expect(result).to.not.satisfy(isThenable)
       }
 
       // Expect (other checks)
@@ -178,12 +178,12 @@ describe('unit:utils/getFileSystemEntries', () => {
 
       // Expect (promises)
       if (isAsync) {
-        expect(result).to.satisfy(isPromise), result = await result
+        expect(result).to.satisfy(isThenable), result = await result
       } else {
-        expect(result).to.not.satisfy(isPromise)
+        expect(result).to.not.satisfy(isThenable)
       }
 
-      ok(!isPromise(result), 'expected file system entries record')
+      ok(!isThenable(result), 'expected file system entries record')
 
       // Expect (other checks)
       expect(readdir).toHaveBeenCalledTimes(1)
