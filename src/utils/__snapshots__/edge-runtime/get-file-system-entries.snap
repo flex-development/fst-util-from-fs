@@ -1,0 +1,487 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`unit:utils/getFileSystemEntries > fs (default) > should return file system entries record (0) 1`] = `
+{
+  "directories": [
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "A",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "B",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "C",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "D",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "E",
+    },
+  ],
+  "files": [
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "a",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "b",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "c",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "d",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "e",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "f",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "s",
+    },
+  ],
+}
+`;
+
+exports[`unit:utils/getFileSystemEntries > fs (default) > should return file system entries record (1) 1`] = `
+{
+  "directories": [
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "A",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "B",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "C",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "D",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "E",
+    },
+  ],
+  "files": [
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "a",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "b",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "c",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "d",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "e",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "f",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "s",
+    },
+  ],
+}
+`;
+
+exports[`unit:utils/getFileSystemEntries > fs (default) > should return file system entries record (2) 1`] = `
+{
+  "directories": [
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "A",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "B",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "C",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "D",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "E",
+    },
+  ],
+  "files": [
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "a",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "b",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "c",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "d",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "e",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "f",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "s",
+    },
+  ],
+}
+`;
+
+exports[`unit:utils/getFileSystemEntries > fs (only async) > should return file system entries record (0) 1`] = `
+{
+  "directories": [
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "A",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "B",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "C",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "D",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "E",
+    },
+  ],
+  "files": [
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "a",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "b",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "c",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "d",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "e",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "f",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "s",
+    },
+  ],
+}
+`;
+
+exports[`unit:utils/getFileSystemEntries > fs (only async) > should return file system entries record (1) 1`] = `
+{
+  "directories": [
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "A",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "B",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "C",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "D",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "E",
+    },
+  ],
+  "files": [
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "a",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "b",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "c",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "d",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "e",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "f",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "s",
+    },
+  ],
+}
+`;
+
+exports[`unit:utils/getFileSystemEntries > fs (only async) > should return file system entries record (2) 1`] = `
+{
+  "directories": [
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "A",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "B",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "C",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "D",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "E",
+    },
+  ],
+  "files": [
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "a",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "b",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "c",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "d",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "e",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "f",
+    },
+    {
+      "isDirectory": [Function anonymous],
+      "isFile": [Function anonymous],
+      "isSymbolicLink": [Function anonymous],
+      "name": "s",
+    },
+  ],
+}
+`;
