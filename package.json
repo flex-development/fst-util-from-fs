@@ -136,7 +136,7 @@
     "@flex-development/pathe": "4.0.2",
     "@flex-development/unist-util-builder": "2.0.0",
     "@flex-development/unist-util-types": "1.6.1",
-    "@flex-development/when": "1.0.0",
+    "@flex-development/when": "2.0.0",
     "devlop": "1.1.0"
   },
   "devDependencies": {
