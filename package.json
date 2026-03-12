@@ -159,8 +159,8 @@
     "@types/node-notifier": "8.0.5",
     "@types/unist": "3.0.3",
     "@vates/toggle-scripts": "1.0.0",
-    "@vitest/coverage-v8": "4.0.18",
-    "@vitest/ui": "4.0.18",
+    "@vitest/coverage-v8": "4.1.0",
+    "@vitest/ui": "4.1.0",
     "concat-stream": "2.0.0",
     "convert-hrtime": "5.0.0",
     "cross-env": "10.1.0",
@@ -181,7 +181,7 @@
     "unified": "11.0.5",
     "unist-util-size": "4.0.0",
     "vfile": "6.0.3",
-    "vitest": "4.0.18"
+    "vitest": "4.1.0"
   },
   "packageManager": "yarn@4.12.0",
   "sideEffects": false
